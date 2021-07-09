@@ -141,7 +141,7 @@ After the chain has been started, we may open up another terminal and start inte
 
 As in the last section, pre-created Hierarchical Deterministic (HD) mnemonic with genesis funds inside are prepared for you in the Devnet. To gain access to the funds, kindly restore the key by using the mnemonic before moving on to the next step.
 
-**Note**: The keys are stored in your operating system by default, we will use `--keyring-backend test` for simplicity. You may refer to a more detailed explaination [here](../wallets/cli.md#the-keyring-keyring-backend-option). 
+**Note**: The keys are stored in your operating system by default, we will use `--keyring-backend test` for simplicity. You may refer to a more detailed explanation [here](../wallets/cli.md#the-keyring-keyring-backend-option). 
 
 - Firstly, restore the key name as `launch`:
 
@@ -308,4 +308,5 @@ $ chain-maind tx distribution withdraw-rewards crocncl173q6r8kc3gl8lccma23qe62q5
 confirm transaction before signing and broadcasting [y/N]: y
 ```
 ____
-If you are interested in contributing to or joining our testnet, you can continue reading the following sections about [Joining the Croeseid Testnet](./thaler-testnet.md).
+
+If you are interested in contributing to or joining our testnet, you can continue reading the following sections about [Joining the Croeseid Testnet](./croeseid-testnet.md).

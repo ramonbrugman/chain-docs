@@ -14,15 +14,28 @@ module.exports = {
       },
 
       {
-        text: "Croeseid Testnet",
-        items: [{
-            text: "Setup Tutorial",
+        text: "Crypto.org Chain",
+        items: [
+          {
+            text: "Mainnet",
+            link: "/getting-started/mainnet"
+          },
+          {
+            text: "Croeseid Testnet",
             link: "/getting-started/croeseid-testnet"
           },
-           {
-             text: "Testnet Explorer",
-             link: "https://crypto.org/explorer"
-           },
+          {
+            text: "Token Migration",
+            link: "/getting-started/token-migration"
+          },
+          {
+            text: "NFT",
+            link: "/getting-started/nft-guide"
+          },
+          {
+              text: "Block Explorer",
+              link: "https://crypto.org/explorer"
+          },
           {
             text: "Testnet Faucet",
             link: "https://crypto.org/faucet"
@@ -54,8 +67,28 @@ module.exports = {
             link: "/wallets/cli.html#chain-maind"
           },
           {
-            text: "Ledger Hardware Wallets",
+            text: "Ledger Hardware Wallets with chain-maind",
             link: "/wallets/ledger.html#ledger-hardware-wallets"
+          },
+          {
+            text: "Ledger Hardware Wallets with Desktop Wallet",
+            link: "/wallets/ledger_desktop_wallet.html#ledger-hardware-wallets"
+          },
+          {
+            text: "Keplr Wallet: Using Ledger Device with Keplr",
+            link: "/wallets/keplr_ledger_guide.html#using-ledger-device-with-keplr"
+          },
+          {
+            text: "Keplr Wallet: Conducting IBC Transfer with ",
+            link: "/wallets/keplr_IBC_guide.html#conducting-ibc-transfer-with-keplr-wallet"
+          },                    
+          {
+            text: "Mainnet Address Generation",
+            link: "/wallets/mainnet-address-generation.md"
+          },
+          {
+            text: "Mainnet Address Verification",
+            link: "/wallets/mainnet-address-verification.md"
           }
         ]
       },
@@ -67,23 +100,35 @@ module.exports = {
         {
             text: "Resources",
             items: [
+              {
+                text: "Integrating Crypto.org Chain ",
+                link: "/resources/chain-integration"
+            },              
                 {
-                    text: "gRPC API",
-                    link: "/resources/cosmos-grpc-docs"
+                    text: "Technical Glossary",
+                    link: "/resources/technical-glossary"
                 },
-
+                {
+                  text: "gRPC API",
+                  link: "/resources/cosmos-grpc-docs"
+              }               
             ]
         }
     ],
     sidebar: {
       "/getting-started/": [
         "",
+        "mainnet",
+        "mainnet_validator",
+        "security-checklist.md",
         "croeseid-testnet",
-        "testnet-aws-1click",
-        "testnet-azure-1click",
+        "aws-1click",
+        "azure-1click",
         "croeseid-testnet-nix",
         "local-devnet",
         "advanced-tmkms-integration",
+        "token-migration",
+        "nft-guide"
         // "notes-on-production-deployment",
 //        "notes-on-performance"
       ],
@@ -93,12 +138,22 @@ module.exports = {
         "chain-id",
         "genesis_file",
         "module_overview",
-        "parameters"
+        "parameters",
+        "govprocess"
       ],
       "/wallets/": [
         "cli",
         "ledger",
-//        "rpc"
+        "ledger_desktop_wallet",
+        "keplr_ledger_guide",
+        "keplr_IBC_guide",
+        "mainnet-address-generation",
+        "mainnet-address-verification",
+      ],
+      "/resources/": [
+        "chain-integration",
+        "node-and-rpc-setup-notes",
+        "blocks-and-transactions",
       ],
       "/api/" : "auto"
     },
@@ -143,6 +198,7 @@ module.exports = {
             "Notes on Production Deployment": 19,
             "Threat Model": 20,
             "technical_glossary": 21
+            
           };
           return ordering[a["title"]] - ordering[b["title"]];
         }
